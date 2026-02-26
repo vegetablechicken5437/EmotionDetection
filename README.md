@@ -13,19 +13,11 @@ This project supports:
 ---
 
 ## Project Structure
-
+```
 EmotionDetection/
 │
 ├── emotion_detection/                # Dataset directory
 │   ├── train/                        # Training images (7 emotion classes)
-│   │   ├── Anger/
-│   │   ├── Disgust/
-│   │   ├── Fear/
-│   │   ├── Happy/
-│   │   ├── Neutral/
-│   │   ├── Sadness/
-│   │   └── Surprise/
-│   │
 │   └── test/                         # Testing images
 │
 ├── saved_models/                     # Auto-saved trained models
@@ -36,12 +28,12 @@ EmotionDetection/
 ├── predict_single_image.py           # Single-image inference script
 ├── requirements.txt                  # Dependencies
 └── README.md                         # Project documentation
-
+```
 
 ---
 
 ## Model Architecture
-
+```
 CNN Model:
 
 Input (48x48x1 grayscale image)
@@ -68,6 +60,7 @@ Input (48x48x1 grayscale image)
 └── Dense (7 units) + Softmax
         ↓
    7 Emotion Classes
+```
 
 ### Emotion Classes
 
