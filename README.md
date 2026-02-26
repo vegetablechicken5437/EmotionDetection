@@ -16,16 +16,26 @@ This project supports:
 
 EmotionDetection/
 │
-├── emotion_detection/
-│ ├── train/
-│ └── test/
+├── emotion_detection/                # Dataset directory
+│   ├── train/                        # Training images (7 emotion classes)
+│   │   ├── Anger/
+│   │   ├── Disgust/
+│   │   ├── Fear/
+│   │   ├── Happy/
+│   │   ├── Neutral/
+│   │   ├── Sadness/
+│   │   └── Surprise/
+│   │
+│   └── test/                         # Testing images
 │
-├── saved_models/
+├── saved_models/                     # Auto-saved trained models
+│   ├── latest_model.keras
+│   └── best_weights.weights.h5
 │
-├── main.py # Training script
-├── predict_single_image.py # Single image inference
-├── requirements.txt
-└── README.md
+├── main.py                           # Training pipeline
+├── predict_single_image.py           # Single-image inference script
+├── requirements.txt                  # Dependencies
+└── README.md                         # Project documentation
 
 
 ---
@@ -34,17 +44,30 @@ EmotionDetection/
 
 CNN Model:
 
-- Conv2D (64) + BatchNorm
-- Conv2D (64) + BatchNorm
-- MaxPooling
-- Dropout
-- Conv2D (128) + BatchNorm
-- Conv2D (128) + BatchNorm
-- MaxPooling
-- Dropout
-- Dense (256)
-- Dropout
-- Softmax (7 classes)
+Input (48x48x1 grayscale image)
+│
+├── Conv2D (64 filters, 3x3, padding='same') + ReLU
+├── BatchNormalization
+├── Conv2D (64 filters, 3x3, padding='same') + ReLU
+├── BatchNormalization
+├── MaxPooling (2x2)
+├── Dropout (0.25)
+│
+├── Conv2D (128 filters, 3x3, padding='same') + ReLU
+├── BatchNormalization
+├── Conv2D (128 filters, 3x3, padding='same') + ReLU
+├── BatchNormalization
+├── MaxPooling (2x2)
+├── Dropout (0.25)
+│
+├── Flatten
+├── Dense (256 units) + ReLU
+├── BatchNormalization
+├── Dropout (0.5)
+│
+└── Dense (7 units) + Softmax
+        ↓
+   7 Emotion Classes
 
 ### Emotion Classes
 
