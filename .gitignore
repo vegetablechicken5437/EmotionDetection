@@ -1,1 +1,6 @@
 /.venv
+saved_models/
+__pycache__/
+*.h5
+*.keras
+*.weights.h5
