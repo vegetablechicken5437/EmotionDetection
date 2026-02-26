@@ -58,7 +58,7 @@ CNN Model:
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### 1️. Clone repository
 git clone https://github.com/vegetablechicken5437/EmotionDetection.git
@@ -114,17 +114,17 @@ Output:
 
 ## Features
 
-✔ Data Augmentation  
-✔ Automatic Checkpoint Saving  
-✔ EarlyStopping  
-✔ ReduceLROnPlateau  
-✔ Auto Load Existing Model  
-✔ Matplotlib Visualization  
-✔ Clean Modular Inference Script  
+- Data Augmentation  
+- Automatic Checkpoint Saving  
+- EarlyStopping  
+- ReduceLROnPlateau  
+- Auto Load Existing Model  
+- Matplotlib Visualization  
+- Clean Modular Inference Script  
 
 ---
 
-## 🛠 Requirements
+## Requirements
 
 - Python 3.9+
 - TensorFlow 2.10+
