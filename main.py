@@ -169,8 +169,8 @@ model.compile(
 SAVE_DIR = "saved_models"
 os.makedirs(SAVE_DIR, exist_ok=True)
 
-LATEST_MODEL_PATH = os.path.join(SAVE_DIR, "emotion_cnn_final_20260225_161636.keras")
-BEST_WEIGHTS_PATH = os.path.join(SAVE_DIR, "emotion_cnn_best_20260225_161636.weights.h5")
+LATEST_MODEL_PATH = os.path.join(SAVE_DIR, "emotion_cnn_final.keras")
+BEST_WEIGHTS_PATH = os.path.join(SAVE_DIR, "emotion_cnn_best.weights.h5")
 
 if os.path.exists(LATEST_MODEL_PATH):
     print("✔ Found existing model. Loading model...")
