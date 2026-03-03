@@ -2,6 +2,8 @@
 
 A deep learning-based facial emotion recognition system trained on grayscale facial images using Convolutional Neural Networks (CNN).
 
+![](sample_results.png)
+
 This project supports:
 
 - Model training with data augmentation
@@ -33,34 +35,8 @@ EmotionDetection/
 ---
 
 ## Model Architecture
-```
-CNN Model:
 
-Input (48x48x1 grayscale image)
-│
-├── Conv2D (64 filters, 3x3, padding='same') + ReLU
-├── BatchNormalization
-├── Conv2D (64 filters, 3x3, padding='same') + ReLU
-├── BatchNormalization
-├── MaxPooling (2x2)
-├── Dropout (0.25)
-│
-├── Conv2D (128 filters, 3x3, padding='same') + ReLU
-├── BatchNormalization
-├── Conv2D (128 filters, 3x3, padding='same') + ReLU
-├── BatchNormalization
-├── MaxPooling (2x2)
-├── Dropout (0.25)
-│
-├── Flatten
-├── Dense (256 units) + ReLU
-├── BatchNormalization
-├── Dropout (0.5)
-│
-└── Dense (7 units) + Softmax
-        ↓
-   7 Emotion Classes
-```
+![](model_structure.png)
 
 ### Emotion Classes
 
